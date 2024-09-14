@@ -1,19 +1,10 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- main
 
-pool:
-  vmImage: ubuntu-latest
+main
+pool: vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+task: NodeTool@0 inputs: versionSpec: '14.x' displayName: 'Install Node.js'
+
+script: | npm install -g apifox-cli apifox run https://api.apifox.com/api/v1/projects/5164920/api-test/ci-config/459281/detail?token=xJtX3IKX1JWj6ovaSrhDwW -r html,cli -b displayName: 'Install Apifox CLI and Run Tests'
