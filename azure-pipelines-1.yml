@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g apifox-cli
+    apifox run https://api.apifox.com/api/v1/projects/401532/api-test/ci-config/460364/detail?token=xKofeTWXgZP2tS9O2VSu3R -r html,cli  -b
+  displayName: 'Install Apifox CLI and Run Tests'
