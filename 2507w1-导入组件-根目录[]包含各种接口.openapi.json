@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "pet",
+    "version": "1.0.0"
+  },
+  "tags": [
+    { "name": "pet" }
+  ],
+  "paths": {
+    "/endpoint/no-auth": {
+      "get": {
+        "summary": "No authentication required (security: [])",
+        "responses": { "200": { "description": "OK" } },
+        "security": []
+      }
+    },
+    "/endpoint/inherit-global": {
+      "get": {
+        "summary": "Inherit global security (no security field)",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/endpoint/with-security-component": {
+      "get": {
+        "summary": "Use security component (security: [{ petstore_auth: [] }])",
+        "responses": { "200": { "description": "OK" } },
+        "security": [
+          { "petstore_auth": [] }
+        ]
+      }
+    },
+    "/endpoint/overwrite-test": {
+      "get": {
+        "tags": ["folder1"],
+        "summary": "Overwrite test for existing data (no security field)",
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+  "/endpoint/create-test": {
+    "get": {
+      "tags": ["folder2"],
+      "summary": "New folder test (no security field)",
+      "responses": { "200": { "description": "OK" } }
+    }
+  }
+},
+  "components": {
+    "schemas": {
+      "Pet": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "securitySchemes": {
+      "petstore_auth": {
+        "type": "oauth2",
+        "flows": {
+          "implicit": {
+            "authorizationUrl": "https://example.com/api/oauth/dialog",
+            "scopes": {
+              "write:pets": "modify pets in your account",
+              "read:pets": "read your pets"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+  ]
+} 
