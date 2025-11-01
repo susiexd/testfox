@@ -1,0 +1,4023 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "500各分支",
+    "description": null,
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/auth/v3/app_access_token/internal": {
+      "post": {
+        "summary": "获取 app_access_token（企业自建应用）",
+        "deprecated": false,
+        "description": "企业自建应用通过此接口获取 app_access_token，调用接口获取应用资源时，需要使用 app_access_token 作为授权凭证。\r\n\r\n参考接口文档：[获取 app_access_token（企业自建应用）]({{document_base_url}}/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/app_access_token_internal)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "app_id": {
+                    "type": "string"
+                  },
+                  "app_secret": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "app_id",
+                  "app_secret"
+                ]
+              },
+              "example": {
+                "app_id": "cli_slkdjalasdkjasd",
+                "app_secret": "dskLLdkasdjlasdKK"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/v3/app_access_token": {
+      "post": {
+        "summary": "获取 app_access_token（应用商店应用）",
+        "deprecated": false,
+        "description": "应用商店应用通过此接口获取 app_access_token，调用接口获取应用资源时，需要使用 app_access_token 作为授权凭证。\r\n\r\n参考接口文档：[获取 app_access_token（应用商店应用）]({{document_base_url}}/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/app_access_token)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "app_id": {
+                    "type": "string"
+                  },
+                  "app_secret": {
+                    "type": "string"
+                  },
+                  "app_ticket": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "app_id",
+                  "app_secret",
+                  "app_ticket"
+                ]
+              },
+              "example": {
+                "app_id": "cli_slkdjalasdkjasd",
+                "app_secret": "dskLLdkasdjlasdKK",
+                "app_ticket": "dskLLdkasd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/v3/tenant_access_token/internal": {
+      "post": {
+        "summary": "获取 tenant_access_token（企业自建应用）",
+        "deprecated": false,
+        "description": "企业自建应用通过此接口获取 tenant_access_token，调用接口获取企业资源时，需要使用 tenant_access_token 作为授权凭证。\r\n\r\n参考接口文档：[获取 tenant_access_token（企业自建应用）]({{document_base_url}}/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token_internal)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "app_id": {
+                    "type": "string"
+                  },
+                  "app_secret": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "app_id",
+                  "app_secret"
+                ]
+              },
+              "example": {
+                "app_id": "cli_slkdjalasdkjasd",
+                "app_secret": "dskLLdkasdjlasdKK"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/v3/tenant_access_token": {
+      "post": {
+        "summary": "获取 tenant_access_token（应用商店应用）",
+        "deprecated": false,
+        "description": "应用商店应用通过此接口获取 tenant_access_token，调用接口获取企业资源时，需要使用 tenant_access_token 作为授权凭证。\r\n\r\n参考接口文档：[获取 tenant_access_token（应用商店应用）]({{document_base_url}}/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/tenant_access_token)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "app_access_token": {
+                    "type": "string"
+                  },
+                  "tenant_key": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "app_access_token",
+                  "tenant_key"
+                ]
+              },
+              "example": {
+                "app_access_token": "a-32bd8551db2f081cbfd26293f27516390b9feb04",
+                "tenant_key": "73658811060f175d"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/auth/v3/app_ticket/resend": {
+      "post": {
+        "summary": "重新推送 app_ticket",
+        "deprecated": false,
+        "description": "飞书每隔 1 小时会给应用推送一次最新的 app_ticket，应用也可以主动调用此接口，触发飞书进行及时的重新推送。（该接口并不能直接获取app_ticket，而是触发事件推送）\r\n\r\n参考接口文档：[重新推送 app_ticket]({{document_base_url}}/ukTMukTMukTM/ukDNz4SO0MjL5QzM/auth-v3/auth/app_ticket_resend)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "app_id": {
+                    "type": "string"
+                  },
+                  "app_secret": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "app_id",
+                  "app_secret"
+                ]
+              },
+              "example": {
+                "app_id": "cli_slkdjalasdkjasd",
+                "app_secret": "dskLLdkasdjlasdKK"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/authen/v1/access_token": {
+      "post": {
+        "summary": "获取登录用户身份",
+        "deprecated": false,
+        "description": "获取登录预授权码 code 对应的登录用户身份。\r\n\r\n参考接口文档：[获取登录用户身份]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/authen/access_token)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "grant_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code",
+                  "grant_type"
+                ]
+              },
+              "example": {
+                "code": "xMSldislSkdK",
+                "grant_type": "authorization_code"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/authen/v1/refresh_access_token": {
+      "post": {
+        "summary": "刷新 access_token",
+        "deprecated": false,
+        "description": "user_access_token 具有一定的时效性，默认最长有效期为7200秒。该接口用于在 user_access_token 过期时用 refresh_token 重新获取 access_token。此时会返回新的 refresh_token，再次刷新 access_token 时需要使用新的 refresh_token。\r\n\r\n参考接口文档：[刷新 access_token]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/authen/refresh_access_token)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grant_type": {
+                    "type": "string"
+                  },
+                  "refresh_token": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "grant_type",
+                  "refresh_token"
+                ]
+              },
+              "example": {
+                "grant_type": "refresh_token",
+                "refresh_token": "ur-oQ0mMq6MCcueAv0pwx2fQQhxqv__CbLu6G8ySFwafeKww2Def2BJdOkW3.9gCFM.LBQgFri901QaqeuL"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/authen/v1/user_info": {
+      "get": {
+        "summary": "获取用户信息",
+        "deprecated": false,
+        "description": "通过 user_access_token 获取登录用户的信息。\r\n\r\n参考接口文档：[获取用户信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/authen/user_info)",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/authen/v1/index": {
+      "get": {
+        "summary": "请求用户身份验证(浏览器打开)",
+        "deprecated": false,
+        "description": "**！！！！注意！！！！**  \n这个接口请从操作系统浏览器中打开，选择账号，点击`授权`，跳转到目标页面之后，从浏览器的地址栏中获取到当前用户的code；",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "redirect_uri",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "{{REDIRECT_URI}}",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "app_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "{{app_id}}",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "{{STATE}}",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "example": "<!doctype html><html lang=\"zh-CN\"><head><meta name=\"suite-passport-compile-at\" content=\"2021-08-11 12:04:20.010\"><meta name=\"suite-passport-commit-id\" content=\"63028bc06900095eef9bbcc23d7e489b3799f65d\"><meta name=\"suite-passport-branch\" content=\"release/2021-08-11\"><meta name=\"suite-passport-build-version\" content=\"1.0.0.1401\"><meta charset=\"UTF-8\"><meta name=\"ROBOTS\" content=\"NOINDEX,NOFOLLOW\"><title></title><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><meta name=\"renderer\" content=\"webkit\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"format-detection\" content=\"email=no\"><meta name=\"msapplication-tap-highlight\" content=\"no\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no\"><meta name=\"referrer\" content=\"origin\"><link href=\"//s0.pstatp.com\" rel=\"preconnect\" crossorigin><link rel=\"dns-prefetch\" href=\"//s0.pstatp.com\"><link href=\"//i.snssdk.com\" rel=\"preconnect\" crossorigin><link rel=\"dns-prefetch\" href=\"//i.snssdk.com\"><link rel=\"shortcut icon\" href=\"https://p6-hera.byteimg.com/tos-cn-i-jbbdkfciu3/f3de430ed2b64f90a95fb8a393dfa6bd~tplv-jbbdkfciu3-image:0:0.image\"><style>html{height:100%}.global-loading{height:180px;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.global-loading img{width:180px;height:180px}@media (max-width:568px){.global-loading{height:2.52rem}.global-loading img{width:2.52rem;height:2.52rem}}</style>&lt;script>\n\n  window.__pageStartTime = new Date().getTime();\n  window.deviceInfoBySSO = {\n      appId: '',\n      loginAppId: '',\n      deviceId: '',\n      deviceModel: '',\n      deviceName: '',\n      deviceOs: ''\n  };\n  window.ENV = 'online'\n  window.locales = [\"en-US\",\"ja-JP\",\"zh-CN\"]\n  window.needRedirect = ''\n  window.crossLoginUrl = ''\n  window.redirectUrl = ''\n  window.passport_web_did = '6997996014045020161'\n  window.rootDomain = 'feishu.cn'\n  window.serverInjectRes = {\"ENV\":\"online\",\"biz_code\":0,\"captcha_service_url\":\"https://internal-api.feishu.cn/\",\"code\":0,\"customization\":{},\"data\":{\"token\":\"959jbf63-9a98-49b0-bc43-499066bd1d8e\",\"app_name\":\"hello-world\",\"app_i18n\":{\"default\":\"hello-world\",\"zh-CN\":\"hello-world\",\"en-US\":\"hello-world\",\"ja-JP\":\"hello-world\"}},\"forceAccountLogin\":false,\"fv3basedir\":\"/goofy/ee/suite/passport/\",\"fv3cdn\":\"https://sf3-scmcdn-cn.feishucdn.com\",\"isKA\":false,\"isPrivateKA\":false,\"locales\":[\"en-US\",\"ja-JP\",\"zh-CN\"],\"message\":\"ok\",\"passport_service_url\":\"https://internal-api-lark-api.feishu.cn/\",\"passport_web_did\":6997996014045020161,\"rootDomain\":\"feishu.cn\",\"unit\":\"eu_nc\"}\n  \n  window.isKA =  false \n  window.isPrivateKA =  false  \n  window.unit = 'eu_nc';\n  window.KAConfig = {\n      channel: '',\n      entranceText:  null \n  }\n  window.forceAccountLogin =  false \n  if (typeof(window.serverInjectRes) !== 'object') {\n      window.serverInjectRes = null;\n  }\n\n  \n  window.template =  null \n&lt;/script&gt;&lt;script>function getCookie(e){var t=document.cookie.match(new RegExp(\"(?:^|; )\"+e.replace(/([\\.$?*|{}\\(\\)\\[\\]\\\\\\/\\+^])/g,\"\\\\$1\")+\"=([^;]*)\"));return t?decodeURIComponent(t[1]):void 0}if(function(){function e(e){return this.config=e,this}e.prototype={reset:function(){var e=Math.min(document.documentElement.clientWidth,750)/750*100;e=Math.min(e,70);var t=1;(function(){try{if(\"undefined\"!=typeof window&&window&&window.navigator)return/ipad/gi.test(window.navigator.userAgent)||Boolean(navigator.maxTouchPoints)&&2<navigator.maxTouchPoints&&/MacIntel/.test(navigator.platform)}catch(e){}return!1})()&&function(){try{return~window.navigator.userAgent.toLowerCase().indexOf(\"lark\")}catch(e){}return!1}()&&(t=1.35),document.documentElement.style.fontSize=e*t+\"px\";var n=e/parseFloat(window.getComputedStyle(document.documentElement).fontSize);1!==n&&(document.documentElement.style.fontSize=e*n+\"px\")}},window.Adapter=new e,window.Adapter.reset(),window.onload=function(){window.Adapter.reset()},window.onresize=function(){window.Adapter.reset()}}(),window.fetch){var options={credentials:\"same-origin\",headers:{\"X-Locale\":getCookie(\"locale\")}},timestamp=(new Date).getTime(),handler=function(e){return e.ok?e.json():(console.error(\"xhr prefetch failed: \"+e.url),null)};window.fetchCache={config:fetch(\"/suite/passport/v3/config?_t=\"+timestamp,options).then(handler)}}else window.fetchCache={}&lt;/script&gt;&lt;script>window.isSSO=!1,window.brand=\"feishu\",window.isServerBrandLark=!1,function(e,r,n,o,t,a,s){(e.SlardarMonitorObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,a=r.createElement(n),s=r.getElementsByTagName(n)[0],a.async=1,a.src=o,a.crossOrigin=\"anonymous\",s.parentNode.insertBefore(a,s),e[t].globalPreCollectError=function(){e[t](\"precollect\",\"error\",arguments)},\"function\"==typeof e.addEventListener&&e.addEventListener(\"error\",e[t].globalPreCollectError,!0),\"PerformanceLongTaskTiming\"in e)&&((o=e[t].lt={e:[]}).o=new PerformanceObserver(function(e){o.e=o.e.concat(e.getEntries())}),o.o.observe({entryTypes:[\"longtask\"]}))}(window,document,\"script\",\"https://i.snssdk.com/slardar/sdk.js?bid=suite_admin_passport\",\"Slardar\"),window.dataLayer=window.dataLayer||[]&lt;/script&gt;<noscript><img style=\"display:none\" src=\"https://px.ads.linkedin.com/collect/?pid=827235&fmt=gif\"></noscript><meta name=\"AppPublic\" content=\"https://sf3-scmcdn-cn.feishucdn.com/goofy/ee/suite/passport/\"><link href=\"https://sf3-scmcdn-cn.feishucdn.com/goofy/ee/suite/passport/static/login/css/page.b9ea1885.css\" rel=\"stylesheet\"></head><body class=\"isWeb\" style=\"-webkit-filter:none\"><noscript><iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NTSM7L8\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript><div id=\"root\"><div class=\"global-loading\"><img src=\"https://s0.pstatp.com/ee/suite_passport_fe/static/v2/inland/img/loading.78e9e97a.gif\"></div></div>&lt;script src=\"https://sf3-scmcdn-cn.feishucdn.com/goofy/ee/suite/passport/static/login/js/vendor~page.login.2f1e4947.js\">&lt;/script&gt;&lt;script src=\"https://sf3-scmcdn-cn.feishucdn.com/goofy/ee/suite/passport/static/login/js/login.32bff9e4.js\">&lt;/script&gt;</body></html>\n"
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/open-apis/mina/v2/tokenLoginValidate": {
+      "post": {
+        "summary": "code2session【小程序场景使用】",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": true,
+            "example": "Bearer {{app_access_token}}",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": {
+                "code": "7dd4e339e176dcaf"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "msg": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "access_token": {
+                          "type": "string"
+                        },
+                        "employee_id": {
+                          "type": "string"
+                        },
+                        "expires_in": {
+                          "type": "integer"
+                        },
+                        "open_id": {
+                          "type": "string"
+                        },
+                        "refresh_token": {
+                          "type": "string"
+                        },
+                        "session_key": {
+                          "type": "string"
+                        },
+                        "tenant_key": {
+                          "type": "string"
+                        },
+                        "union_id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "access_token",
+                        "employee_id",
+                        "expires_in",
+                        "open_id",
+                        "refresh_token",
+                        "session_key",
+                        "tenant_key",
+                        "union_id"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "msg",
+                    "data"
+                  ]
+                },
+                "example": {
+                  "code": 0,
+                  "msg": "success",
+                  "data": {
+                    "access_token": "u-tpwcnx2XzIcq8yHyJ6KLUh",
+                    "employee_id": "6c486g85",
+                    "expires_in": 1627572900,
+                    "open_id": "ou_194fcfc5e4b78db556a040ff5e42c00d",
+                    "refresh_token": "ur-W9dGvBJyVtwZmrwh0vBnJc",
+                    "session_key": "e3aeb7df000c835365c630dac91bcfb9",
+                    "tenant_key": "2c5914ac018f975e",
+                    "union_id": "ou_be2c1742f2bb189469bdd33f0b1516ea"
+                  }
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/contact/v3/users": {
+      "post": {
+        "summary": "创建用户",
+        "deprecated": false,
+        "description": "使用该接口向通讯录创建一个用户，可以理解为员工入职。创建用户后只返回有数据权限的数据。具体的数据权限的与字段的对应关系请参照[应用权限]({{document_base_url}}/ukTMukTMukTM/uQjN3QjL0YzN04CN2cDN)。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[创建用户]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/create)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型。\n\n不同 ID 的说明以及获取方式参见 [部门ID说明]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/field-overview#23857fe0)",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client_token",
+            "in": "query",
+            "description": "根据client_token是否一致来判断是否为同一请求",
+            "required": false,
+            "example": "xxxx-xxxxx-xxx",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "avatar_key": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "custom_attrs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "object",
+                          "properties": {
+                            "generic_user": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "type"
+                              ]
+                            },
+                            "option_id": {
+                              "type": "string"
+                            },
+                            "pc_url": {
+                              "type": "string"
+                            },
+                            "text": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "generic_user",
+                            "option_id",
+                            "pc_url",
+                            "text",
+                            "url"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "department_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "employee_no": {
+                    "type": "string"
+                  },
+                  "employee_type": {
+                    "type": "integer"
+                  },
+                  "en_name": {
+                    "type": "string"
+                  },
+                  "ent_email_password": {
+                    "type": "string"
+                  },
+                  "enterprise_email": {
+                    "type": "string"
+                  },
+                  "gender": {
+                    "type": "integer"
+                  },
+                  "idp_type": {
+                    "type": "string"
+                  },
+                  "job_title": {
+                    "type": "string"
+                  },
+                  "join_time": {
+                    "type": "integer"
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  },
+                  "mobile_visible": {
+                    "type": "boolean"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "need_send_notification": {
+                    "type": "boolean"
+                  },
+                  "nickname": {
+                    "type": "string"
+                  },
+                  "notification_option": {
+                    "type": "object",
+                    "properties": {
+                      "channels": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "language": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "channels",
+                      "language"
+                    ]
+                  },
+                  "orders": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "department_order": {
+                          "type": "integer"
+                        },
+                        "user_order": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "positions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "is_major": {
+                          "type": "boolean"
+                        },
+                        "leader_position_code": {
+                          "type": "string"
+                        },
+                        "leader_user_id": {
+                          "type": "string"
+                        },
+                        "position_code": {
+                          "type": "string"
+                        },
+                        "position_name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "user_id": {
+                    "type": "string"
+                  },
+                  "work_station": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "avatar_key",
+                  "city",
+                  "country",
+                  "custom_attrs",
+                  "department_ids",
+                  "description",
+                  "email",
+                  "employee_no",
+                  "employee_type",
+                  "en_name",
+                  "ent_email_password",
+                  "enterprise_email",
+                  "gender",
+                  "idp_type",
+                  "job_title",
+                  "join_time",
+                  "leader_user_id",
+                  "mobile",
+                  "mobile_visible",
+                  "name",
+                  "need_send_notification",
+                  "nickname",
+                  "notification_option",
+                  "orders",
+                  "positions",
+                  "user_id",
+                  "work_station"
+                ]
+              },
+              "example": {
+                "avatar_key": "2500c7a9-5fff-4d9a-a2de-3d59614ae28g",
+                "city": "杭州",
+                "country": "CN",
+                "custom_attrs": [
+                  {
+                    "id": "DemoId",
+                    "type": "TEXT",
+                    "value": {
+                      "generic_user": {
+                        "id": "9b2fabg5",
+                        "type": 1
+                      },
+                      "option_id": "edcvfrtg",
+                      "pc_url": "http://www.feishu.cn",
+                      "text": "DemoText",
+                      "url": "http://www.feishu.cn"
+                    }
+                  }
+                ],
+                "department_ids": [
+                  "od-4e6ac4d14bcd5071a37a39de902c7141"
+                ],
+                "description": "",
+                "email": "zhangsan@gmail.com",
+                "employee_no": "1",
+                "employee_type": 1,
+                "en_name": "San Zhang",
+                "ent_email_password": "",
+                "enterprise_email": "demo@mail.com",
+                "gender": 1,
+                "idp_type": "",
+                "job_title": "xxxxx",
+                "join_time": 2147483647,
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "mobile": "中国大陆手机号: 13011111111 或 +8613011111111, 境外手机号:  +41446681800",
+                "mobile_visible": false,
+                "name": "张三",
+                "need_send_notification": false,
+                "nickname": "Alex Zhang",
+                "notification_option": {
+                  "channels": [
+                    ""
+                  ],
+                  "language": "zh-CN"
+                },
+                "orders": [
+                  {
+                    "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141",
+                    "department_order": 100,
+                    "user_order": 100
+                  }
+                ],
+                "positions": [
+                  {
+                    "department_id": "",
+                    "is_major": false,
+                    "leader_position_code": "",
+                    "leader_user_id": "",
+                    "position_code": "",
+                    "position_name": ""
+                  }
+                ],
+                "user_id": "3e3cf96b",
+                "work_station": "北楼-H34"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/users/{user_id}": {
+      "get": {
+        "summary": "获取单个用户信息",
+        "deprecated": false,
+        "description": "该接口用于获取通讯录中单个用户的信息。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[获取单个用户信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/get)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "用户ID，需要与查询参数中的user_id_type类型保持一致。",
+            "required": true,
+            "example": "7be5fg9a",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "修改用户部分信息",
+        "deprecated": false,
+        "description": "该接口用于更新通讯录中用户的字段，未传递的参数不会更新。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[修改用户部分信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/patch)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "用户ID，需要与查询参数中的user_id_type类型保持一致。",
+            "required": true,
+            "example": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "avatar_key": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "custom_attrs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "object",
+                          "properties": {
+                            "generic_user": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "type"
+                              ]
+                            },
+                            "option_id": {
+                              "type": "string"
+                            },
+                            "pc_url": {
+                              "type": "string"
+                            },
+                            "text": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "generic_user",
+                            "option_id",
+                            "pc_url",
+                            "text",
+                            "url"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "department_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "employee_no": {
+                    "type": "string"
+                  },
+                  "employee_type": {
+                    "type": "integer"
+                  },
+                  "en_name": {
+                    "type": "string"
+                  },
+                  "ent_email_password": {
+                    "type": "string"
+                  },
+                  "enterprise_email": {
+                    "type": "string"
+                  },
+                  "gender": {
+                    "type": "integer"
+                  },
+                  "idp_type": {
+                    "type": "string"
+                  },
+                  "is_frozen": {
+                    "type": "boolean"
+                  },
+                  "job_title": {
+                    "type": "string"
+                  },
+                  "join_time": {
+                    "type": "integer"
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  },
+                  "mobile_visible": {
+                    "type": "boolean"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "nickname": {
+                    "type": "string"
+                  },
+                  "orders": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "department_order": {
+                          "type": "integer"
+                        },
+                        "user_order": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "positions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "is_major": {
+                          "type": "boolean"
+                        },
+                        "leader_position_code": {
+                          "type": "string"
+                        },
+                        "leader_user_id": {
+                          "type": "string"
+                        },
+                        "position_code": {
+                          "type": "string"
+                        },
+                        "position_name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "work_station": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "avatar_key",
+                  "city",
+                  "country",
+                  "custom_attrs",
+                  "department_ids",
+                  "description",
+                  "email",
+                  "employee_no",
+                  "employee_type",
+                  "en_name",
+                  "ent_email_password",
+                  "enterprise_email",
+                  "gender",
+                  "idp_type",
+                  "is_frozen",
+                  "job_title",
+                  "join_time",
+                  "leader_user_id",
+                  "mobile",
+                  "mobile_visible",
+                  "name",
+                  "nickname",
+                  "orders",
+                  "positions",
+                  "work_station"
+                ]
+              },
+              "example": {
+                "avatar_key": "2500c7a9-5fff-4d9a-a2de-3d59614ae28g",
+                "city": "杭州",
+                "country": "CN",
+                "custom_attrs": [
+                  {
+                    "id": "DemoId",
+                    "type": "TEXT",
+                    "value": {
+                      "generic_user": {
+                        "id": "9b2fabg5",
+                        "type": 1
+                      },
+                      "option_id": "edcvfrtg",
+                      "pc_url": "http://www.feishu.cn",
+                      "text": "DemoText",
+                      "url": "http://www.feishu.cn"
+                    }
+                  }
+                ],
+                "department_ids": [
+                  "od-4e6ac4d14bcd5071a37a39de902c7141"
+                ],
+                "description": "",
+                "email": "zhangsan@gmail.com",
+                "employee_no": "1",
+                "employee_type": 1,
+                "en_name": "San Zhang",
+                "ent_email_password": "",
+                "enterprise_email": "demo@mail.com",
+                "gender": 1,
+                "idp_type": "",
+                "is_frozen": false,
+                "job_title": "xxxxx",
+                "join_time": 2147483647,
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "mobile": "中国大陆手机号: 13011111111 或 +8613011111111, 境外手机号:  +41446681800",
+                "mobile_visible": false,
+                "name": "张三",
+                "nickname": "Alex Zhang",
+                "orders": [
+                  {
+                    "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141",
+                    "department_order": 100,
+                    "user_order": 100
+                  }
+                ],
+                "positions": [
+                  {
+                    "department_id": "",
+                    "is_major": false,
+                    "leader_position_code": "",
+                    "leader_user_id": "",
+                    "position_code": "",
+                    "position_name": ""
+                  }
+                ],
+                "work_station": "北楼-H34"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "更新用户所有信息",
+        "deprecated": false,
+        "description": "该接口用于更新通讯录中用户的字段。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[更新用户所有信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/update)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "用户ID，需要与查询参数中的user_id_type类型保持一致。",
+            "required": true,
+            "example": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "avatar_key": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "custom_attrs": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "object",
+                          "properties": {
+                            "generic_user": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "type"
+                              ]
+                            },
+                            "option_id": {
+                              "type": "string"
+                            },
+                            "pc_url": {
+                              "type": "string"
+                            },
+                            "text": {
+                              "type": "string"
+                            },
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "generic_user",
+                            "option_id",
+                            "pc_url",
+                            "text",
+                            "url"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "department_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "employee_no": {
+                    "type": "string"
+                  },
+                  "employee_type": {
+                    "type": "integer"
+                  },
+                  "en_name": {
+                    "type": "string"
+                  },
+                  "ent_email_password": {
+                    "type": "string"
+                  },
+                  "enterprise_email": {
+                    "type": "string"
+                  },
+                  "gender": {
+                    "type": "integer"
+                  },
+                  "idp_type": {
+                    "type": "string"
+                  },
+                  "is_frozen": {
+                    "type": "boolean"
+                  },
+                  "job_title": {
+                    "type": "string"
+                  },
+                  "join_time": {
+                    "type": "integer"
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "mobile": {
+                    "type": "string"
+                  },
+                  "mobile_visible": {
+                    "type": "boolean"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "nickname": {
+                    "type": "string"
+                  },
+                  "orders": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "department_order": {
+                          "type": "integer"
+                        },
+                        "user_order": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "positions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "department_id": {
+                          "type": "string"
+                        },
+                        "is_major": {
+                          "type": "boolean"
+                        },
+                        "leader_position_code": {
+                          "type": "string"
+                        },
+                        "leader_user_id": {
+                          "type": "string"
+                        },
+                        "position_code": {
+                          "type": "string"
+                        },
+                        "position_name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "work_station": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "avatar_key",
+                  "city",
+                  "country",
+                  "custom_attrs",
+                  "department_ids",
+                  "description",
+                  "email",
+                  "employee_no",
+                  "employee_type",
+                  "en_name",
+                  "ent_email_password",
+                  "enterprise_email",
+                  "gender",
+                  "idp_type",
+                  "is_frozen",
+                  "job_title",
+                  "join_time",
+                  "leader_user_id",
+                  "mobile",
+                  "mobile_visible",
+                  "name",
+                  "nickname",
+                  "orders",
+                  "positions",
+                  "work_station"
+                ]
+              },
+              "example": {
+                "avatar_key": "2500c7a9-5fff-4d9a-a2de-3d59614ae28g",
+                "city": "杭州",
+                "country": "CN",
+                "custom_attrs": [
+                  {
+                    "id": "DemoId",
+                    "type": "TEXT",
+                    "value": {
+                      "generic_user": {
+                        "id": "9b2fabg5",
+                        "type": 1
+                      },
+                      "option_id": "edcvfrtg",
+                      "pc_url": "http://www.feishu.cn",
+                      "text": "DemoText",
+                      "url": "http://www.feishu.cn"
+                    }
+                  }
+                ],
+                "department_ids": [
+                  "od-4e6ac4d14bcd5071a37a39de902c7141"
+                ],
+                "description": "",
+                "email": "zhangsan@gmail.com",
+                "employee_no": "1",
+                "employee_type": 1,
+                "en_name": "San Zhang",
+                "ent_email_password": "",
+                "enterprise_email": "demo@mail.com",
+                "gender": 1,
+                "idp_type": "",
+                "is_frozen": false,
+                "job_title": "xxxxx",
+                "join_time": 2147483647,
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "mobile": "中国大陆手机号: 13011111111 或 +8613011111111, 境外手机号:  +41446681800",
+                "mobile_visible": false,
+                "name": "张三",
+                "nickname": "Alex Zhang",
+                "orders": [
+                  {
+                    "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141",
+                    "department_order": 100,
+                    "user_order": 100
+                  }
+                ],
+                "positions": [
+                  {
+                    "department_id": "",
+                    "is_major": false,
+                    "leader_position_code": "",
+                    "leader_user_id": "",
+                    "position_code": "",
+                    "position_name": ""
+                  }
+                ],
+                "work_station": "北楼-H34"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "删除用户",
+        "deprecated": false,
+        "description": "该接口向通讯录删除一个用户信息，可以理解为员工离职。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[删除用户]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/delete)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "用户ID，需要与查询参数中的user_id_type类型保持一致。",
+            "required": true,
+            "example": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "application_acceptor_user_id": {
+                    "type": "string"
+                  },
+                  "calendar_acceptor_user_id": {
+                    "type": "string"
+                  },
+                  "department_chat_acceptor_user_id": {
+                    "type": "string"
+                  },
+                  "docs_acceptor_user_id": {
+                    "type": "string"
+                  },
+                  "external_chat_acceptor_user_id": {
+                    "type": "string"
+                  },
+                  "helpdesk_acceptor_user_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "application_acceptor_user_id",
+                  "calendar_acceptor_user_id",
+                  "department_chat_acceptor_user_id",
+                  "docs_acceptor_user_id",
+                  "external_chat_acceptor_user_id",
+                  "helpdesk_acceptor_user_id"
+                ]
+              },
+              "example": {
+                "application_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "calendar_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "department_chat_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "docs_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "external_chat_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "helpdesk_acceptor_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/users/find_by_department": {
+      "get": {
+        "summary": "获取部门直属用户列表",
+        "deprecated": false,
+        "description": "基于部门ID获取，获取部门直属用户列表。\n[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN).\r\n\r\n参考接口文档：[获取部门直属用户列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/find_by_department)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id",
+            "in": "query",
+            "description": "填写该字段表示获取该部门下用户，必填。根部门的部门ID为0。",
+            "required": true,
+            "example": "od-xxxxxxxxxxxxx",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/users/batch_get_id": {
+      "post": {
+        "summary": "通过手机号或邮箱获取用户 ID",
+        "deprecated": false,
+        "description": "通过该接口，可使用手机号/邮箱获取用户的 ID 信息，具体获取支持的 ID 类型包括 open_id、user_id、union_id，可通过查询参数指定。\r\n\r\n参考接口文档：[通过手机号或邮箱获取用户 ID]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/batch_get_id)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "emails": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "mobiles": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "emails",
+                  "mobiles"
+                ]
+              },
+              "example": {
+                "emails": [
+                  "zhangsan@z.com",
+                  "lisi@a.com"
+                ],
+                "mobiles": [
+                  "13812345678",
+                  "13812345679"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments": {
+      "post": {
+        "summary": "创建部门",
+        "deprecated": false,
+        "description": "该接口用于向通讯录中创建部门。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[创建部门]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/create)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client_token",
+            "in": "query",
+            "description": "根据client_token是否一致来判断是否为同一请求",
+            "required": false,
+            "example": "473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "create_group_chat": {
+                    "type": "boolean"
+                  },
+                  "department_id": {
+                    "type": "string"
+                  },
+                  "i18n_name": {
+                    "type": "object",
+                    "properties": {
+                      "en_us": {
+                        "type": "string"
+                      },
+                      "ja_jp": {
+                        "type": "string"
+                      },
+                      "zh_cn": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "en_us",
+                      "ja_jp",
+                      "zh_cn"
+                    ]
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "order": {
+                    "type": "string"
+                  },
+                  "parent_department_id": {
+                    "type": "string"
+                  },
+                  "unit_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "create_group_chat",
+                  "department_id",
+                  "i18n_name",
+                  "leader_user_id",
+                  "name",
+                  "order",
+                  "parent_department_id",
+                  "unit_ids"
+                ]
+              },
+              "example": {
+                "create_group_chat": false,
+                "department_id": "D096",
+                "i18n_name": {
+                  "en_us": "Demo Name",
+                  "ja_jp": "デモ名",
+                  "zh_cn": "Demo名称"
+                },
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "name": "DemoName",
+                "order": "100",
+                "parent_department_id": "D067",
+                "unit_ids": [
+                  "custom_unit_id"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments/{department_id}": {
+      "get": {
+        "summary": "获取单个部门信息",
+        "deprecated": false,
+        "description": "该接口用于向通讯录获取单个部门信息。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[获取单个部门信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/get)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id",
+            "in": "path",
+            "description": "需要获取的部门ID",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "summary": "修改部分部门信息",
+        "deprecated": false,
+        "description": "该接口用于更新通讯录中部门的信息中的任一个字段。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[修改部分部门信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/patch)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id",
+            "in": "path",
+            "description": "部门ID，需要与查询参数中传入的department_id_type类型保持一致。",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "create_group_chat": {
+                    "type": "boolean"
+                  },
+                  "i18n_name": {
+                    "type": "object",
+                    "properties": {
+                      "en_us": {
+                        "type": "string"
+                      },
+                      "ja_jp": {
+                        "type": "string"
+                      },
+                      "zh_cn": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "en_us",
+                      "ja_jp",
+                      "zh_cn"
+                    ]
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "order": {
+                    "type": "string"
+                  },
+                  "parent_department_id": {
+                    "type": "string"
+                  },
+                  "unit_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "create_group_chat",
+                  "i18n_name",
+                  "leader_user_id",
+                  "name",
+                  "order",
+                  "parent_department_id",
+                  "unit_ids"
+                ]
+              },
+              "example": {
+                "create_group_chat": false,
+                "i18n_name": {
+                  "en_us": "Demo Name",
+                  "ja_jp": "デモ名",
+                  "zh_cn": "Demo名称"
+                },
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "name": "DemoName",
+                "order": "100",
+                "parent_department_id": "D067",
+                "unit_ids": [
+                  "custom_unit_id"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "更新部门所有信息",
+        "deprecated": false,
+        "description": "该接口用于更新当前部门所有信息。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[更新部门所有信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/update)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id",
+            "in": "path",
+            "description": "部门ID，需要与查询参数中传入的department_id_type类型保持一致。",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "create_group_chat": {
+                    "type": "boolean"
+                  },
+                  "i18n_name": {
+                    "type": "object",
+                    "properties": {
+                      "en_us": {
+                        "type": "string"
+                      },
+                      "ja_jp": {
+                        "type": "string"
+                      },
+                      "zh_cn": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "en_us",
+                      "ja_jp",
+                      "zh_cn"
+                    ]
+                  },
+                  "leader_user_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "order": {
+                    "type": "string"
+                  },
+                  "parent_department_id": {
+                    "type": "string"
+                  },
+                  "unit_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "create_group_chat",
+                  "i18n_name",
+                  "leader_user_id",
+                  "name",
+                  "order",
+                  "parent_department_id",
+                  "unit_ids"
+                ]
+              },
+              "example": {
+                "create_group_chat": false,
+                "i18n_name": {
+                  "en_us": "Demo Name",
+                  "ja_jp": "デモ名",
+                  "zh_cn": "Demo名称"
+                },
+                "leader_user_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "name": "DemoName",
+                "order": "100",
+                "parent_department_id": "D067",
+                "unit_ids": [
+                  "custom_unit_id"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "删除部门",
+        "deprecated": false,
+        "description": "该接口用于向通讯录中删除部门。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[删除部门]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/delete)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id",
+            "in": "path",
+            "description": "部门ID，需要与查询参数中传入的department_id_type类型保持一致。",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments/{department_id}/children": {
+      "get": {
+        "summary": "获取子部门列表",
+        "deprecated": false,
+        "description": "通过部门ID获取部门的子部门列表。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[获取子部门列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/children)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id",
+            "in": "path",
+            "description": "部门ID，根部门的部门ID 为0",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fetch_child",
+            "in": "query",
+            "description": "是否递归获取子部门",
+            "required": false,
+            "example": "false",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/RD/cIFmu77WxpxPB/2oHfQLZ+G8JG6tK7+ZnHiT7COhD2hMSICh/eBl7cpzU6JEC3J7COKNe4jrQ8ExwBCR",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments/parent": {
+      "get": {
+        "summary": "获取父部门信息",
+        "deprecated": false,
+        "description": "该接口用来递归获取部门父部门的信息，并按照由子到父的顺序返回有权限的父部门信息列表。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[获取父部门信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/parent)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id",
+            "in": "query",
+            "description": "部门ID",
+            "required": true,
+            "example": "od-4e6ac4d14bcd5071a37a39de902c7141",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/RD/cIFmu77WxpxPB/2oHfQLZ%2BG8JG6tK7%2BZnHiT7COhD2hMSICh/eBl7cpzU6JEC3J7COKNe4jrQ8ExwBCR",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments/search": {
+      "post": {
+        "summary": "搜索部门",
+        "deprecated": false,
+        "description": "搜索部门，用户通过关键词查询可见的部门数据，部门可见性需要管理员在后台配置。[常见问题答疑]({{document_base_url}}/ugTN1YjL4UTN24CO1UjN/uQzN1YjL0cTN24CN3UjN)。\r\n\r\n参考接口文档：[搜索部门]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/search)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/RD/cIFmu77WxpxPB/2oHfQLZ+G8JG6tK7+ZnHiT7COhD2hMSICh/eBl7cpzU6JEC3J7COKNe4jrQ8ExwBCR",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "query"
+                ]
+              },
+              "example": {
+                "query": "DemoName"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/departments/unbind_department_chat": {
+      "post": {
+        "summary": "部门群转为普通群",
+        "deprecated": false,
+        "description": "通过该接口将部门群转为普通群。\r\n\r\n参考接口文档：[部门群转为普通群]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/department/unbind_department_chat)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中使用的部门ID的类型，默认为\"open_department_id\"",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "department_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "department_id"
+                ]
+              },
+              "example": {
+                "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group/{group_id}/member/add": {
+      "post": {
+        "summary": "添加用户组成员",
+        "deprecated": false,
+        "description": "向用户组中添加成员(目前成员仅支持用户，未来会支持部门)，如果应用的通讯录权限范围是“全部员工”，则可将任何成员添加到任何用户组。如果应用的通讯录权限范围不是“全部员工”，则仅可将通讯录权限范围中的成员添加到通讯录权限范围的用户组中，[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[添加用户组成员]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group-member/add)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "用户组ID",
+            "required": true,
+            "example": "g281721",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "member_id": {
+                    "type": "string"
+                  },
+                  "member_id_type": {
+                    "type": "string"
+                  },
+                  "member_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "member_id",
+                  "member_id_type",
+                  "member_type"
+                ]
+              },
+              "example": {
+                "member_id": "ou_7dab8a3d3cdcc9da365777c7ad535d62",
+                "member_id_type": "open_id",
+                "member_type": "user"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group/{group_id}/member/remove": {
+      "post": {
+        "summary": "移除用户组成员",
+        "deprecated": false,
+        "description": "从用户组中移除成员 (目前成员仅支持用户，未来会支持部门)，如果应用的通讯录权限范围是“全部员工”，则可将任何成员移出任何用户组。如果应用的通讯录权限范围不是“全部员工”，则仅可将通讯录权限范围中的成员从通讯录权限范围的用户组中移除， [点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[移除用户组成员]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group-member/remove)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "用户组ID",
+            "required": true,
+            "example": "g198123",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "member_id": {
+                    "type": "string"
+                  },
+                  "member_id_type": {
+                    "type": "string"
+                  },
+                  "member_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "member_id",
+                  "member_id_type",
+                  "member_type"
+                ]
+              },
+              "example": {
+                "member_id": "xj82871k",
+                "member_id_type": "open_id",
+                "member_type": "user"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group/{group_id}/member/simplelist": {
+      "get": {
+        "summary": "查询用户组成员列表",
+        "deprecated": false,
+        "description": "通过该接口可查询某个用户组的成员(目前成员仅支持用户，未来会支持部门)列表，如果应用的通讯录权限范围是“全部员工”，则可查询企业内任何用户组的成员列表。如果应用的通讯录权限范围不是“全部员工”，则仅可查询通讯录权限范围中的用户组的成员列表，[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[查询用户组成员列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group-member/simplelist)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "用户组ID",
+            "required": true,
+            "example": "g128187",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "50",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "member_id_type",
+            "in": "query",
+            "description": "欲获取成员ID类型。当member_type =user时候，member_id_type表示user_id_type，枚举值为open_id, union_id, user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "member_type",
+            "in": "query",
+            "description": "期待获取的用户组成员的类型，取值为 user",
+            "required": false,
+            "example": "user",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group": {
+      "post": {
+        "summary": "创建用户组",
+        "deprecated": false,
+        "description": "使用该接口创建用户组，请注意创建用户组时应用的通讯录权限范围需为“全部员工”，否则会创建失败，[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[创建用户组]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group/create)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "group_id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "description",
+                  "group_id",
+                  "name",
+                  "type"
+                ]
+              },
+              "example": {
+                "description": "IT服务人员的集合",
+                "group_id": "g122817",
+                "name": "IT 外包组",
+                "type": 1
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group/{group_id}": {
+      "patch": {
+        "summary": "更新用户组",
+        "deprecated": false,
+        "description": "使用该接口更新用户组信息，请注意更新用户组时应用的通讯录权限范围需为“全部员工”，否则会更新失败。[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[更新用户组]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group/patch)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "用户组ID",
+            "required": true,
+            "example": "g187131",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "description": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "description",
+                  "name"
+                ]
+              },
+              "example": {
+                "description": "IT 外包用户组，需要进行细粒度权限管控",
+                "name": "外包 IT 用户组"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "删除用户组",
+        "deprecated": false,
+        "description": "通过该接口可删除企业中的用户组，请注意删除用户组时应用的通讯录权限范围需为“全部员工”，否则会删除失败，[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[删除用户组]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group/delete)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "需删除的用户组ID",
+            "required": true,
+            "example": "g1837191",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "查询用户组",
+        "deprecated": false,
+        "description": "根据用户组 ID 查询某个用户组的基本信息，请确保应用的通讯录权限范围里包括该用户组或者是“全部员工”，[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[查询用户组]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group/get)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "group_id",
+            "in": "path",
+            "description": "用户组ID",
+            "required": true,
+            "example": "g193821",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/group/simplelist": {
+      "get": {
+        "summary": "查询用户组列表",
+        "deprecated": false,
+        "description": "通过该接口可查询企业的用户组列表，如果应用的通讯录权限范围是“全部员工”，则可获取企业全部用户组列表。如果应用的通讯录权限范围不是“全部员工”，则仅可获取通讯录权限范围内的用户组。[点击了解通讯录权限范围]({{document_base_url}}/ukTMukTMukTM/uETNz4SM1MjLxUzM/v3/guides/scope_authority)。\r\n\r\n参考接口文档：[查询用户组列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/group/simplelist)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "50",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "用户组类型",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/unit": {
+      "post": {
+        "summary": "创建单位",
+        "deprecated": false,
+        "description": "使用该接口创建单位，需要有更新单位的权限。注意：单位功能属于旗舰版付费功能，企业需开通对应版本才可以创建单位。\r\n\r\n参考接口文档：[创建单位]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/create)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "unit_id": {
+                    "type": "string"
+                  },
+                  "unit_type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "unit_id",
+                  "unit_type"
+                ]
+              },
+              "example": {
+                "name": "消费者事业部",
+                "unit_id": "BU121",
+                "unit_type": "事业部"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "批量获取单位列表",
+        "deprecated": false,
+        "description": "通过该接口获取企业的单位列表，需获取单位的权限\r\n\r\n参考接口文档：[批量获取单位列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/list)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "50",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/unit/{unit_id}": {
+      "patch": {
+        "summary": "修改单位信息",
+        "deprecated": false,
+        "description": "调用该接口，需要有更新单位的权限。注意：单位功能属于旗舰版付费功能，企业需开通对应版本才可以修改单位\r\n\r\n参考接口文档：[修改单位信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/patch)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "unit_id",
+            "in": "path",
+            "description": "单位ID",
+            "required": true,
+            "example": "BU121",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              },
+              "example": {
+                "name": "消费者事业部"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "删除单位",
+        "deprecated": false,
+        "description": "使用该接口删除单位，需要有更新单位的权限。注意：如果单位的单位类型被其它的业务使用，不允许删除。\r\n\r\n参考接口文档：[删除单位]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/delete)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "unit_id",
+            "in": "path",
+            "description": "单位ID",
+            "required": true,
+            "example": "BU121",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              },
+              "example": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "summary": "获取单位信息",
+        "deprecated": false,
+        "description": "调用该接口获取单位信息，需有获取单位的权限\r\n\r\n参考接口文档：[获取单位信息]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/get)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "unit_id",
+            "in": "path",
+            "description": "单位ID",
+            "required": true,
+            "example": "BU121",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/unit/bind_department": {
+      "post": {
+        "summary": "建立部门与单位的绑定关系",
+        "deprecated": false,
+        "description": "通过该接口建立部门与单位的绑定关系，需更新单位的权限，需对应部门的通讯录权限。由于单位是旗舰版付费功能，企业需开通相关版本，否则会绑定失败\r\n\r\n参考接口文档：[建立部门与单位的绑定关系]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/bind_department)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "department_id": {
+                    "type": "string"
+                  },
+                  "department_id_type": {
+                    "type": "string"
+                  },
+                  "unit_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "department_id",
+                  "department_id_type",
+                  "unit_id"
+                ]
+              },
+              "example": {
+                "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141",
+                "department_id_type": "open_department_id",
+                "unit_id": "BU121"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/unit/unbind_department": {
+      "post": {
+        "summary": "解除部门与单位的绑定关系",
+        "deprecated": false,
+        "description": "通过该接口解除部门与单位的绑定关系，需更新单位的权限，需对应部门的通讯录权限。由于单位是旗舰版付费功能，企业需开通相关功能，否则会解绑失败\r\n\r\n参考接口文档：[解除部门与单位的绑定关系]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/unbind_department)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "department_id": {
+                    "type": "string"
+                  },
+                  "department_id_type": {
+                    "type": "string"
+                  },
+                  "unit_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "department_id",
+                  "department_id_type",
+                  "unit_id"
+                ]
+              },
+              "example": {
+                "department_id": "od-4e6ac4d14bcd5071a37a39de902c7141",
+                "department_id_type": "open_department_id",
+                "unit_id": "BU121"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/unit/list_department": {
+      "get": {
+        "summary": "获取单位绑定的部门列表",
+        "deprecated": false,
+        "description": "通过该接口获取单位绑定的部门列表，需具有获取单位的权限\r\n\r\n参考接口文档：[获取单位绑定的部门列表]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/unit/list_department)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "unit_id",
+            "in": "query",
+            "description": "单位ID",
+            "required": true,
+            "example": "BU121",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "此次调用中预获取的部门ID的类型",
+            "required": false,
+            "example": "open_department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "50",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/employee_type_enums": {
+      "get": {
+        "summary": "查询人员类型",
+        "deprecated": false,
+        "description": "该接口用于获取员工的人员类型\r\n\r\n参考接口文档：[查询人员类型]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/employee_type_enum/list)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "3",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "新增人员类型",
+        "deprecated": false,
+        "description": "新增自定义人员类型\r\n\r\n参考接口文档：[新增人员类型]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/employee_type_enum/create)",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string"
+                  },
+                  "enum_status": {
+                    "type": "integer"
+                  },
+                  "enum_type": {
+                    "type": "integer"
+                  },
+                  "i18n_content": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "locale": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "content",
+                  "enum_status",
+                  "enum_type",
+                  "i18n_content"
+                ]
+              },
+              "example": {
+                "content": "专家",
+                "enum_status": 1,
+                "enum_type": 2,
+                "i18n_content": [
+                  {
+                    "locale": "zh_cn",
+                    "value": "专家"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/employee_type_enums/{enum_id}": {
+      "put": {
+        "summary": "更新人员类型",
+        "deprecated": false,
+        "description": "更新自定义人员类型\r\n\r\n参考接口文档：[更新人员类型]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/employee_type_enum/update)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "enum_id",
+            "in": "path",
+            "description": "枚举值id",
+            "required": true,
+            "example": "exGeIjow7zIqWMy+ONkFxA==",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "content": {
+                    "type": "string"
+                  },
+                  "enum_status": {
+                    "type": "integer"
+                  },
+                  "enum_type": {
+                    "type": "integer"
+                  },
+                  "i18n_content": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "locale": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "content",
+                  "enum_status",
+                  "enum_type",
+                  "i18n_content"
+                ]
+              },
+              "example": {
+                "content": "专家",
+                "enum_status": 1,
+                "enum_type": 2,
+                "i18n_content": [
+                  {
+                    "locale": "zh_cn",
+                    "value": "专家"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "删除人员类型",
+        "deprecated": false,
+        "description": "删除自定义人员类型\r\n\r\n参考接口文档：[删除人员类型]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/employee_type_enum/delete)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "enum_id",
+            "in": "path",
+            "description": "枚举值id",
+            "required": true,
+            "example": "exGeIjow7zIqWMy+ONkFxA==",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/custom_attrs": {
+      "get": {
+        "summary": "获取企业自定义用户字段",
+        "deprecated": false,
+        "description": "获取企业自定义的用户字段配置信息\r\n\r\n参考接口文档：[获取企业自定义用户字段]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/custom_attr/list)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "10",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/RYU5lvOM4s6zgbeeNNaWd%2BVKwAsoreeRWk0J2noGvJy",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/contact/v3/scopes": {
+      "get": {
+        "summary": "获取通讯录授权范围",
+        "deprecated": false,
+        "description": "该接口用于获取应用被授权可访问的通讯录范围，包括可访问的部门列表、用户列表和用户组列表。\n授权范围为全员时，返回的部门列表为该企业所有的一级部门；否则返回的部门为管理员在设置授权范围时勾选的部门（不包含勾选部门的子部门）。\r\n\r\n参考接口文档：[获取通讯录授权范围]({{document_base_url}}/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/scope/list)",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "user_id_type",
+            "in": "query",
+            "description": "用户 ID 类型。可选值：open_id、union_id、user_id",
+            "required": false,
+            "example": "open_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "department_id_type",
+            "in": "query",
+            "description": "返回值的部门ID的类型",
+            "required": false,
+            "example": "department_id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_token",
+            "in": "query",
+            "description": "分页标记，第一次请求不填，表示从头开始遍历；分页查询结果还有更多项时会同时返回新的 page_token，下次遍历可采用该 page_token 获取查询结果",
+            "required": false,
+            "example": "AQD9/Rn9eij9Pm39ED40/dk53s4Ebp882DYfFaPFbz00L4CMZJrqGdzNyc8BcZtDbwVUvRmQTvyMYicnGWrde9X56TgdBuS+JKiSIkdexPw=",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "分页大小",
+            "required": false,
+            "example": "50",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "M2-schema2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID 编号"
+          },
+          "M2-schema2": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "M2-schema2"
+        ]
+      },
+      "M2-schema1": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID 编号"
+          },
+          "M2-schema1": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "M2-schema1"
+        ]
+      }
+    },
+    "securitySchemes": {
+      "M2_scheme1": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "M2_scheme1_key"
+      },
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "servers": [],
+  "security": []
+}
