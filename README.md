@@ -1,5 +1,7 @@
 # testfox-1
 
+branch = featureA0
+
 trigger:
 - main
 

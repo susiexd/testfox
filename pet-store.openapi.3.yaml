@@ -1,15 +1,27 @@
 openapi: 3.0.4
 info:
   title: Swagger Petstore - OpenAPI 3.0
-  description: |-
-    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about
-    Swagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!
-    You can now help us improve the API whether it's by making changes to the definition itself or to the code.
-    That way, with time, we can improve the API in general, and expose some of the new features in OAS3.
+  description: >-
+    This is a sample Pet Store Server based on the OpenAPI 3.0 specification. 
+    You can find out more about
+
+    Swagger at [https://swagger.io](https://swagger.io). In the third iteration
+    of the pet store, we've switched to the design first approach!
+
+    You can now help us improve the API whether it's by making changes to the
+    definition itself or to the code.
+
+    That way, with time, we can improve the API in general, and expose some of
+    the new features in OAS3.
+
 
     Some useful links:
-    - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
-    - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+
+    - [The Pet Store
+    repository](https://github.com/swagger-api/swagger-petstore)
+
+    - [The source API definition for the Pet
+    Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
   termsOfService: https://swagger.io/terms/
   contact:
     email: apiteam@swagger.io
@@ -40,9 +52,66 @@ paths:
     put:
       tags:
         - pet
+        - new2
       summary: Update an existing pet(⭐️Update at June 26.v10-0131).
-      description: Update an existing pet by Id.
-      operationId: updatePet
+      description: |
+        Update an existing pet by Id.
+
+        <Tabs>
+          <Tab title="First Tab">
+            ☝️ Welcome to the content that you can only see inside the first Tab.
+          </Tab>
+          <Tab title="Second Tab">
+            ✌️ Here's content that's only inside the second Tab.
+          </Tab>
+          <Tab title="Third Tab">
+            💪 Here's content that's only inside the third Tab.
+          </Tab>
+        </Tabs>
+      operationId: updatePet.Modi
+      parameters:
+        - in: header
+          name: new3
+          schema:
+            type: string
+        - in: header
+          name: new2
+          schema:
+            type: string
+        - in: query
+          name: q1
+          schema:
+            type: string
+          description: desc
+        - in: header
+          name: Accept
+          schema:
+            type: string
+          description: desc1
+        - in: cookie
+          name: tags
+          schema:
+            type: string
+          description: tag
+        - in: header
+          name: new1
+          schema:
+            type: string
+          description: '22'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Pet'
+      security:
+        - petstore_auth:
+            - write:pets
+            - read:pets
       requestBody:
         description: Update an existent pet in the store
         content:
@@ -55,29 +124,11 @@ paths:
           application/x-www-form-urlencoded:
             schema:
               $ref: '#/components/schemas/Pet'
+          text/plain:
+            schema:
+              type: object
+              properties: {}
         required: true
-      responses:
-        '200':
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/Pet'
-        '400':
-          description: Invalid ID supplied
-        '404':
-          description: Pet not found
-        '422':
-          description: Validation exception
-        default:
-          description: Unexpected error
-      security:
-        - petstore_auth:
-            - write:pets
-            - read:pets
     post:
       tags:
         - pet
@@ -164,7 +215,9 @@ paths:
       tags:
         - pet
       summary: Finds Pets by tags.
-      description: Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.
+      description: >-
+        Multiple tags can be provided with comma separated strings. Use tag1,
+        tag2, tag3 for testing.
       operationId: findPetsByTags
       parameters:
         - name: tags
@@ -198,6 +251,75 @@ paths:
         - petstore_auth:
             - write:pets
             - read:pets
+  /pet/findByTags2:
+    get:
+      tags:
+        - pet
+      summary: Finds Pets by tags.
+      description: >-
+        Multiple tags can be provided with comma separated strings. Use tag1,
+        tag2, tag3 for testing.
+      operationId: findPetsByTags
+      parameters:
+        - name: tags
+          in: query
+          description: Tags to filter by
+          required: false
+          explode: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: successful operationRef
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  x-apidog-refs:
+                    01KG7XCWT2KWPXA7RW51Y8BGD4:
+                      $ref: '#/components/schemas/Pet'
+                      x-apidog-overrides: {}
+                  properties:
+                    add1:
+                      type: string
+                  x-apidog-orders:
+                    - 01KG7XCWT2KWPXA7RW51Y8BGD4
+                    - add1
+                  required:
+                    - add1
+        '400':
+          description: Invalid tag value
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: 'false'
+                x-apidog-orders:
+                  - success
+                required:
+                  - success
+        default:
+          description: Unexpected error
+          content:
+            text/plain:
+              schema:
+                type: string
+      security:
+        - petstore_auth:
+            - write:pets
+            - read:pets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Tag'
   /pet/{petId}:
     get:
       tags:
@@ -267,7 +389,7 @@ paths:
                 $ref: '#/components/schemas/Pet'
             application/xml:
               schema:
-                $ref: '#/components/schemas/Pet'        
+                $ref: '#/components/schemas/Pet'
         '400':
           description: Invalid input
         default:
@@ -411,7 +533,9 @@ paths:
         - store
       summary: Find purchase order by ID.
       x-swagger-router-controller: OrderController
-      description: For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.
+      description: >-
+        For valid response try integer IDs with value <= 5 or > 10. Other values
+        will generate exceptions.
       operationId: getOrderById
       parameters:
         - name: orderId
@@ -441,7 +565,9 @@ paths:
       tags:
         - store
       summary: Delete purchase order by identifier.
-      description: For valid response try integer IDs with value < 1000. Anything above 1000 or non-integers will generate API errors.
+      description: >-
+        For valid response try integer IDs with value < 1000. Anything above
+        1000 or non-integers will generate API errors.
       x-swagger-router-controller: OrderController
       operationId: deleteOrder
       parameters:
@@ -490,7 +616,7 @@ paths:
                 $ref: '#/components/schemas/User'
             application/xml:
               schema:
-                $ref: '#/components/schemas/User'        
+                $ref: '#/components/schemas/User'
         default:
           description: Unexpected error
   /user/createWithList:
@@ -831,8 +957,8 @@ components:
         implicit:
           authorizationUrl: https://petstore3.swagger.io/oauth/authorize
           scopes:
-            "write:pets": modify pets in your account
-            "read:pets": read your pets
+            write:pets: modify pets in your account
+            read:pets: read your pets
     api_key:
       type: apiKey
       name: api_key

@@ -21,6 +21,7 @@
         "responses": { "200": { "description": "OK" } }
       }
     },
+
     "/endpoint/with-security-component": {
       "get": {
         "summary": "Use security component (security: [{ petstore_auth: [] }])",
