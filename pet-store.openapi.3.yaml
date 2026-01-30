@@ -40,7 +40,7 @@ paths:
     put:
       tags:
         - pet
-      summary: Update an existing pet(⭐️Update at June 26.v10-0130).
+      summary: Update an existing pet(⭐️Update at June 26.v10-0131).
       description: Update an existing pet by Id.
       operationId: updatePet
       requestBody:
