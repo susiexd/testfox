@@ -274,6 +274,10 @@
                   "name",
                   "status"
                 ]
+              },
+              "example": {
+                "name": "Hello Kitty",
+                "status": "sold"
               }
             }
           }
