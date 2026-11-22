@@ -2,7 +2,6 @@
   "openapi": "3.0.1",
   "info": {
     "title": "500各分支",
-    "description": null,
     "version": "1.0.0"
   },
   "tags": [],
